@@ -45,7 +45,6 @@ const router = new VueRouter({
 });
 
 router.beforeEach((to, from, next) => {
-	console.log('to', to.name);
 	// if (to.meta.private && !state.user) {
 	if (to.matched.some(r => r.meta.private) && !state.user) {
 		next({
