@@ -1,17 +1,22 @@
 <template>
   <main class="tickets-layout">
-    <h1>您的问题</h1>
+    <h1>问题</h1>
 
     <!-- <Tickets /> -->
 
     <div class="actions">
-      <router-link v-if="$route.name !== 'tickets'"
-                   tag="button"
+      <router-link tag="button"
                    class="secondary"
-                   :to="{name: 'tickets'}">查看全部</router-link>
-      <router-link v-if="$route.name !== 'new-ticket'"
-                   tag="button"
+                   :to="{name: 'all-ticket'}">全部问题</router-link>
+      &nbsp;
+      <router-link tag="button"
+                   class="secondary"
+                   :to="{name: 'tickets'}">您的问题</router-link>
+      &nbsp;
+      <router-link tag="button"
+                   class="secondary"
                    :to="{name: 'new-ticket'}">新的问题</router-link>
+
     </div>
 
     <router-view />

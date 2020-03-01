@@ -10,7 +10,7 @@ import Tickets from '../components/Tickets.vue';
 import NewTicket from '../components/NewTicket.vue';
 import Ticket from '../components/Ticket.vue';
 import NotFound from '../views/NotFound.vue';
-
+import AllTickets from '../components/AllTickets.vue';
 Vue.use(VueRouter);
 
 const routes = [
@@ -23,6 +23,7 @@ const routes = [
 		meta: { private: true },
 		children: [
 			{ path: '', name: 'tickets', component: Tickets },
+			{ path: 'all', name: 'all-ticket', component: AllTickets },
 			{ path: 'new', name: 'new-ticket', component: NewTicket },
 			{ path: ':id', name: 'ticket', component: Ticket, props: true }
 		]

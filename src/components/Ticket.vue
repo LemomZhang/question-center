@@ -1,6 +1,6 @@
 <template>
   <div class="ticket">
-    <h2>问题</h2>
+    <h2>详情</h2>
 
     <Loading v-if="remoteDataBusy" />
 

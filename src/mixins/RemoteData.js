@@ -33,6 +33,16 @@ export default function(resources) {
 				this.$data.remoteErrors[key] = null;
 				try {
 					this.$data[key] = await this.$fetch(url);
+					console.log(this.$data[key]);
+					this.$data[key].sort(function(a, b) {
+						if (a.date < b.date) {
+							return 1;
+						}
+						if (a.date > b.date) {
+							return -1;
+						}
+						return 0;
+					});
 				} catch (e) {
 					console.error(e);
 					this.$data.remoteErrors[key] = e;

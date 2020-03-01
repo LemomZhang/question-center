@@ -5,7 +5,7 @@
 
     <div class="empty"
          v-else-if="tickets.length === 0">
-      您还没有任何记录
+      还没有任何记录
     </div>
 
     <section v-else
@@ -31,7 +31,7 @@ import RemoteData from '../mixins/RemoteData';
 export default {
   mixins: [
     RemoteData({
-      tickets: 'tickets'
+      tickets: 'allTickets'
     })
   ]
   // components: {
@@ -44,3 +44,4 @@ export default {
   // },
 };
 </script>
+

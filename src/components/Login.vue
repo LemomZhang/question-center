@@ -95,7 +95,9 @@ export default {
           password: this.password
         })
       });
-      this.$router.replace(this.$route.params.wantedRoute || { name: 'home' });
+      this.$router.replace(
+        this.$route.params.wantedRoute || { name: 'tickets' }
+      );
     },
     async signup() {
       await this.$fetch('signup', {
