@@ -10,7 +10,7 @@ import { $fetch } from './plugins/fetch';
 import * as filters from './filters';
 import './global-components';
 Vue.use(VueFetch, {
-	baseUrl: 'http://localhost:3000/'
+	baseUrl: 'http://47.105.174.230:3000/'
 });
 Vue.use(VueState, state);
 Vue.config.productionTip = false;
